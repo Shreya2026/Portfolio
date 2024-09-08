@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyanshi Singhal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/student.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main">
+    <div id="header">
+        <div class="container">
+        <nav>
+            <h1>Shreyanshi Singhal</h1>
+            <ul id="sidemenu">
+                <img onclick="closemenu()" class="icon" src="Images/close.svg" alt="" >
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+            <img   onclick="openmenu()" class="icon ham" src="Images/hamburger.svg" alt="">
+        </nav>
+    </div>
+        <div class="img"></div>
+    </div>
+    <div class="details">
+        <p class="yellow">Hello!</p>
+        <h1><span>I'm</span><span class="yellow"> Shreyanshi Singhal</span></h1>
+        <p class="yellow">Frontend Developer</p>
+    </div>
+</div>
+<!-- --------------------about-------------------- -->
+<div id="about" class="about">
+    <div class="left"><img src="Images/About.jpeg" alt="img"></div>
+    <div class="right">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod corrupti quos autem dolorum eos. Natus, ipsa. Distinctio nemo molestias excepturi temporibus molestiae, quos fuga eaque a exercitationem amet, voluptatibus obcaecati repellat quas ab libero, aliquam tenetur officiis qui? Impedit iusto itaque quae ut dolores ipsam molestiae, molestias sed eaque blanditiis!</p>
+        <div class="myqualifications ">
+            <ul>
+                <li class="tablinks activelink" onclick="opentab('skills')">Skills</li>
+                <li class="tablinks" onclick="opentab('education')">Education</li>
+                <li class="tablinks" onclick="opentab('certificates')">Certificates</li>
+            </ul>
+        </div>
+        <div class="my-quali-contents activetab" id="skills">
+            <ul>
+                <li><span>Languages</span><br>C  | Java</li>
+                <li><span>Web Development</span><br>HTML | CSS | Javascript | Flask</li>
+                <li><span>Database</span><br>MySql</li>
+            </ul>
+        </div>
+        <div class="my-quali-contents" id="education">
+            <ul>
+                <li><span>Bachelors of Technology - Computer Science and Engineering</span><br>Dr. A.P.J. Abdul Kalam Technical University | 2026 &nbsp &nbsp Overall CGPA:8.36</li>
+                <li><span>Class 12</span><br>Silver Line Prestige School(CBSE) | 2022 &nbsp &nbsp 76%</li>
+                <li><span>Class 10</span><br>Silver Line Prestige School(CBSE) | 2020 &nbsp &nbsp 89%</li>
+            </ul>
+        </div>
+        <div class="my-quali-contents" id="certificates">
+            <ul>
+                <li><span>C Programming</span><br>IIT Bombay</li>
+                <li><span>Completion of Cyber Security Essentials</span><br>Cisco Academy</li>
+                <li><span>Diving into Web Designing</span><br>GDSC</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- -----------------projects------------------- -->
+ <div id="project" class="projects">
+    <h1>Projects</h1>
+    <div class="card-container">
+        <div class="card"><img src="Images/img1.webp" alt="">
+            <div class="layer"><div class="txt">
+            <h2>Melodic</h2>
+            <p>A responsive music streaming website designed to deliver a seamless and enjoyable listening experience across all devices </p>
+            <a href="#"><img src="Images/link.svg" alt=""></a></div>
+        </div>
+    </div>
+        <div class="card"><img src="Images/img2.jpg" alt="">
+            <div class="layer"><div class="txt">
+                <h2>Plan IT</h2>
+                <p>An innovative daily planner designed to help users organize their lives efficiently and effectively. With a user-friendly interface, this planner allows individuals to schedule tasks, set reminders, and track their progress throughout the day.</p>
+                <a href="#"><img src="Images/link.svg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="card"><img src="Images/img3.jpg" alt="">
+            <div class="layer"><div class="txt">
+                <h2>Blood Buddy</h2>
+                <p>A comprehensive blood donation portal dedicated to connecting donors with those in need of blood transfusions. This platform simplifies the process of finding and scheduling blood donations, ensuring that life-saving blood is always available. </p>
+                <a href="#"><img src="Images/link.svg" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <!-- -------------------contact------------------------ -->
+
+ <div id="contact" class="contact">
+    <div class="first">
+        <div class="contact-details">
+        <h1>Contact Me</h1>
+        <div class="box">
+        <div class="mail">
+        <img src="Images/gmail.svg" alt="">
+        <p>shreyanshisinghal210@gmail.com</p></div>
+        <div class="call"><img src="Images/phone.svg" alt="">
+        <p>+91 8800226612</p></div>
+        <div class="social-icons">
+            <a class="contact_me" href="https://www.linkedin.com/in/shreyanshi-singhal-462718256/" target="_blank"><img src="Images/linkedin.svg" alt=""></a>
+            <a class="contact_me" href="https://github.com/Shreya2026"><img src="Images/github.svg" target="_blank" alt=""></a>
+            <a class="contact_me" href="https://leetcode.com/u/shreyanshisinghal210/" target="_blank"><img src="Images/leetcode.svg" alt=""></a>
+        </div>
+        <a href="Shreyanshi Singhal.pdf" target="_blank" download="Shreyanshi Singhal">
+        <button class="btn">Download CV</button></a>
+    </div>
+    </div>
+</div>
+    <div class="second">
+        <Form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="text" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message..."></textarea>
+            <button class="btn" type="submit">Submit</button>
+        </Form>
+        <span id="msg"></span>
+    </div>
+ </div>
+ 
+ <script src="script.js"></script>
+ <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOTYn7SMhnl4cAlWDmVPHveNAhV25LEfkP2IfsmIo9YQbZVyVZVxgV78-7-1W5reNFfg/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent Successfully!!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
