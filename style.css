@@ -479,14 +479,14 @@ form input,form textarea{
     
     nav ul{
         background: #d1d125;
-        position: absolute;
+        position: fixed;
         top: 0;
         right:-130%;
         transition: right 0.3s ease;
         width: 80vw;
         height: 91vh;
         padding-top: 50px;
-        z-index: 2;
+        z-index: 1;
     }
     nav ul{
         display: block;

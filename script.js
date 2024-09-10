@@ -15,9 +15,10 @@ function opentab(tabname){
 }
 
 
-function openmenu(){
-    sidemenu.style.right="-90px";
+function openmenu() {
+    document.getElementById('sidemenu').style.right = '-136px';
 }
-function closemenu(){
-    sidemenu.style.right="-130%";
+
+function closemenu() {
+    document.getElementById('sidemenu').style.right = '-350px';
 }
