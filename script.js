@@ -16,8 +16,8 @@ function opentab(tabname){
 
 
 function openmenu(){
-    sidemenu.style.right="-196px";
+    sidemenu.style.right="-90px";
 }
 function closemenu(){
-    sidemenu.style.right="-576px";
+    sidemenu.style.right="-130%";
 }
