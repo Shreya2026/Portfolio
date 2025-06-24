@@ -1,0 +1,14 @@
+/* Example Navbar.css */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fde047; /* your hover/active color */
+  background: #02160d; /* optional: highlight background */
+  border-radius: 4px;
+}
