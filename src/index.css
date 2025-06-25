@@ -45,6 +45,13 @@ body {
   overflow-y: hidden;
 }
 
+/* Allow vertical scroll on tablets and mobiles */
+@media (max-width: 1024px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
