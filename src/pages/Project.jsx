@@ -25,7 +25,7 @@ const projects = [
     tech: "HTML,CSS,Javascript",
     image: melodic,
     github: "https://github.com/shreya2026/melodic",
-    link: "https://shreyanshi.me/Melodic/",
+    link: "https://shreya2026.github.io/Melodic/",
   },
   // Add more projects as needed
 ];
