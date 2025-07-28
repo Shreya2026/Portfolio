@@ -44,18 +44,10 @@ function Project() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 50 }}
       transition={{ duration: 0.5 }}
+      className="h-screen w-full bg-[#18191f] text-white overflow-hidden p-4 md:p-6 lg:p-8"
     >
-      <div className="bg-[#18191f] text-white flex items-center justify-center p-6 min-h-70 ml-23 ">
-        <div
-          className="w-full flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20"
-          style={{
-            maxWidth: "850px",
-            minHeight: "480px",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "auto",
-          }}
-        >
+      <div className="max-w-7xl mx-auto h-full">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12 h-full justify-center">
           <LeftSide project={projects[current]} />
           <RightSide
             project={projects[current]}

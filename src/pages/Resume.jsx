@@ -36,7 +36,7 @@ const info = {
         <br /><br />
         Beyond code, I love learning new tools, contributing to meaningful projects, and collaborating with like-minded developers. I believe in writing clean, maintainable code and designing with accessibility and performance in mind.
         <br /><br />
-        <span className='text-yellow-500'>🔗 Let’s connect and build something amazing together!</span>
+        <span className='text-yellow-500'>🔗 Let's connect and build something amazing together!</span>
       </p>
     ),
   },
@@ -95,171 +95,104 @@ function Resume() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -50 }}
       transition={{ duration: 0.5 }}
-      style={{
-        display: 'flex',
-        height: '80vh',
-        background: 'rgba(0,0,0,0.1)',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        boxShadow: '0 2px 16px rgba(0,0,0,0.08)',
-      }}
+      className="h-screen w-full px-4 md:px-8 lg:px-16 xl:px-24 py-6 overflow-hidden"
     >
-      {/* Left Side */}
-      <div
-        style={{
-          flex: 3,
-          background: '#02160d',
-          color: '#fff',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '2rem 1rem',
-          gap: '2rem',
-        }}
-      >
-        <h1 style={{ marginBottom: '2rem' }}>Why hire me?</h1>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
-          <button
-            onClick={() => setSelected('about')}
-            style={{
-              padding: '0.75rem 1.5rem',
-              background: selected === 'about' ? '#fde047' : '#fff',
-              color: selected === 'about' ? '#02160d' : '#02160d',
-              border: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              transition: 'background 0.2s, color 0.2s',
-            }}
-          >
-            About Me
-          </button>
-          <button
-            onClick={() => setSelected('skills')}
-            style={{
-              padding: '0.75rem 1.5rem',
-              background: selected === 'skills' ? '#fde047' : '#fff',
-              color: selected === 'skills' ? '#02160d' : '#02160d',
-              border: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              transition: 'background 0.2s, color 0.2s',
-            }}
-          >
-            Skills
-          </button>
-          <button
-            onClick={() => setSelected('education')}
-            style={{
-              padding: '0.75rem 1.5rem',
-              background: selected === 'education' ? '#fde047' : '#fff',
-              color: selected === 'education' ? '#02160d' : '#02160d',
-              border: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              transition: 'background 0.2s, color 0.2s',
-            }}
-          >
-            Education
-          </button>
-        </div>
-      </div>
-      {/* Right Side */}
-      <div
-        style={{
-          flex: 7,
-          background: 'radial-gradient(#134c55, #031012)',
-          color: '#fff',
-          display: 'flex',
-          flexDirection: 'column',
-          padding: '2rem',
-          overflowY: 'auto',
-        }}
-      >
-        <h1 style={{ color: 'rgb(225 255 0)', textAlign: 'center', width: '100%', margin: 0 }}>{heading}</h1>
-        <div
-          style={{
-            flex: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: 0,
-          }}
-        >
-          {date && (
-            <div style={{ textAlign: 'center', width: '100%', fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1.5rem' }}>
-              {date}
+      <div className="max-w-7xl mx-auto bg-black/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl h-full">
+        <div className="flex flex-col md:flex-row h-full">
+          {/* Left Side - Navigation */}
+          <div className="w-full md:w-1/3 bg-[#02160d] text-white flex flex-col items-center p-4 md:p-6">
+            <h1 className="text-lg md:text-xl xl:text-2xl mb-4 md:mb-6 text-center font-bold">Why hire me?</h1>
+            <div className="flex flex-row md:flex-col gap-2 md:gap-4 w-full max-w-md overflow-x-auto md:overflow-x-visible">
+              <button
+                onClick={() => setSelected('about')}
+                className={`px-4 py-3 md:px-6 md:py-4 whitespace-nowrap rounded-lg font-bold cursor-pointer transition-all duration-300 text-sm md:text-base ${
+                  selected === 'about' 
+                    ? 'bg-[#fde047] text-[#02160d] shadow-lg transform scale-105' 
+                    : 'bg-white text-[#02160d] hover:bg-gray-200 hover:transform hover:scale-102'
+                }`}
+              >
+                About Me
+              </button>
+              <button
+                onClick={() => setSelected('skills')}
+                className={`px-4 py-3 md:px-6 md:py-4 whitespace-nowrap rounded-lg font-bold cursor-pointer transition-all duration-300 text-sm md:text-base ${
+                  selected === 'skills' 
+                    ? 'bg-[#fde047] text-[#02160d] shadow-lg transform scale-105' 
+                    : 'bg-white text-[#02160d] hover:bg-gray-200 hover:transform hover:scale-102'
+                }`}
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => setSelected('education')}
+                className={`px-4 py-3 md:px-6 md:py-4 whitespace-nowrap rounded-lg font-bold cursor-pointer transition-all duration-300 text-sm md:text-base ${
+                  selected === 'education' 
+                    ? 'bg-[#fde047] text-[#02160d] shadow-lg transform scale-105' 
+                    : 'bg-white text-[#02160d] hover:bg-gray-200 hover:transform hover:scale-102'
+                }`}
+              >
+                Education
+              </button>
             </div>
-          )}
-          <div style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}>
-            {selected === 'skills' ? (
-              <div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    gap: '2rem', 
-                    minHeight: '48px', 
-                    marginBottom: '2rem',
-                    marginTop: '-1.5rem',
-                  }}
-                >
-                  <button
-                    onClick={() => setSkillTab('language')}
-                    style={{
-                      padding: '0.5rem 1.2rem',
-                      background: skillTab === 'language' ? '#fde047' : '#fff',
-                      color: skillTab === 'language' ? '#02160d' : '#02160d',
-                      border: 'none',
-                      borderRadius: '6px',
-                      fontWeight: 'bold',
-                      cursor: 'pointer',
-                      transition: 'background 0.2s, color 0.2s',
-                    }}
-                  >
-                    Language
-                  </button>
-                  <button
-                    onClick={() => setSkillTab('web')}
-                    style={{
-                      padding: '0.5rem 1.2rem',
-                      background: skillTab === 'web' ? '#fde047' : '#fff',
-                      color: skillTab === 'web' ? '#02160d' : '#02160d',
-                      border: 'none',
-                      borderRadius: '6px',
-                      fontWeight: 'bold',
-                      cursor: 'pointer',
-                      transition: 'background 0.2s, color 0.2s',
-                    }}
-                  >
-                    Web
-                  </button>
-                  <button
-                    onClick={() => setSkillTab('database')}
-                    style={{
-                      padding: '0.5rem 1.2rem',
-                      background: skillTab === 'database' ? '#fde047' : '#fff',
-                      color: skillTab === 'database' ? '#02160d' : '#02160d',
-                      border: 'none',
-                      borderRadius: '6px',
-                      fontWeight: 'bold',
-                      cursor: 'pointer',
-                      transition: 'background 0.2s, color 0.2s',
-                    }}
-                  >
-                    Database
-                  </button>
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="w-full md:w-2/3 bg-gradient-to-br from-[#134c55] to-[#031012] text-white flex flex-col p-4 md:p-6 xl:p-8 overflow-hidden">
+            <h1 className="text-xl md:text-2xl xl:text-3xl text-yellow-300 text-center mb-4 md:mb-6 font-bold">{heading}</h1>
+            
+            <div className="flex-1 flex flex-col justify-center items-center overflow-hidden min-h-0">
+              {date && (
+                <div className="text-center font-bold text-base md:text-lg xl:text-xl mb-4 md:mb-6 text-gray-200">
+                  {date}
                 </div>
-                <div style={{ minHeight: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {skillTabs[skillTab]}
-                </div>
+              )}
+              
+              <div className="w-full max-w-4xl mx-auto overflow-y-auto flex-1 flex items-center justify-center">
+                {selected === 'skills' ? (
+                  <div className="w-full">
+                    <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-4 md:mb-6">
+                      <button
+                        onClick={() => setSkillTab('language')}
+                        className={`px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm xl:text-base rounded-lg font-bold cursor-pointer transition-all duration-300 ${
+                          skillTab === 'language' 
+                            ? 'bg-[#fde047] text-[#02160d] shadow-lg transform scale-105' 
+                            : 'bg-white text-[#02160d] hover:bg-gray-200 hover:transform hover:scale-102'
+                        }`}
+                      >
+                        Languages
+                      </button>
+                      <button
+                        onClick={() => setSkillTab('web')}
+                        className={`px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm xl:text-base rounded-lg font-bold cursor-pointer transition-all duration-300 ${
+                          skillTab === 'web' 
+                            ? 'bg-[#fde047] text-[#02160d] shadow-lg transform scale-105' 
+                            : 'bg-white text-[#02160d] hover:bg-gray-200 hover:transform hover:scale-102'
+                        }`}
+                      >
+                        Web Tech
+                      </button>
+                      <button
+                        onClick={() => setSkillTab('database')}
+                        className={`px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm xl:text-base rounded-lg font-bold cursor-pointer transition-all duration-300 ${
+                          skillTab === 'database' 
+                            ? 'bg-[#fde047] text-[#02160d] shadow-lg transform scale-105' 
+                            : 'bg-white text-[#02160d] hover:bg-gray-200 hover:transform hover:scale-102'
+                        }`}
+                      >
+                        Database
+                      </button>
+                    </div>
+                    <div className="min-h-[150px] md:min-h-[200px] flex items-center justify-center text-sm md:text-base xl:text-lg">
+                      {skillTabs[skillTab]}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-sm md:text-base xl:text-lg leading-relaxed flex items-center justify-center min-h-[200px] md:min-h-[300px]">
+                    {content}
+                  </div>
+                )}
               </div>
-            ) : (
-              content
-            )}
+            </div>
           </div>
         </div>
       </div>

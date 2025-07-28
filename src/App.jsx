@@ -9,18 +9,18 @@ import Contact from './pages/Contact';
 function App() {
     return (
         <Router>
-          <div style={{marginTop:'15px', padding: '0' }}>
-          <Navbar />
-              </div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/resume" element={<Resume />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-         
+            <div className="min-h-screen w-full">
+                <Navbar />
+                <main className="w-full">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/resume" element={<Resume />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </main>
+            </div>
         </Router>
-      
     );
 }
 
