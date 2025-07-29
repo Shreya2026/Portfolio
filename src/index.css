@@ -51,6 +51,15 @@ body {
   font-size: 16px;
 }
 
+/* Allow scrolling on mobile for contact page */
+@media (max-width: 767px) {
+  body.contact-page {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
 /* Responsive typography */
 h1 {
   font-size: clamp(2rem, 5vw, 4rem);

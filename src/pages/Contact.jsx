@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 
 function Contact() {
@@ -7,6 +7,14 @@ function Contact() {
   const [showStatus, setShowStatus] = useState(false);
 
   const YOUR_EMAIL = "shreyanshisinghal210@gmail.com";
+
+  // Add/remove contact-page class to body for mobile scrolling
+  useEffect(() => {
+    document.body.classList.add('contact-page');
+    return () => {
+      document.body.classList.remove('contact-page');
+    };
+  }, []);
 
   // Formspree handler
   const handleSubmit = async (e) => {
@@ -40,7 +48,7 @@ function Contact() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -50 }}
       transition={{ duration: 0.5 }}
-      className="h-screen w-full px-4 md:px-8 lg:px-16 xl:px-24 py-6 overflow-hidden"
+      className="h-screen md:h-screen w-full px-4 md:px-8 lg:px-16 xl:px-24 py-6 overflow-y-auto md:overflow-hidden min-h-screen"
     >
       <div className="max-w-7xl mx-auto h-full">
         <div className="flex flex-col lg:flex-row bg-black/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl h-full">
